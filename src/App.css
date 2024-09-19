@@ -1,38 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom right, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  margin: 2rem;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  color: tomato;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Big-container {
+  margin-top: 5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.FORM label {
+  color: aqua;
+}
+
+.First-input {
+  padding: 0.5rem;
+  margin: 0 1rem 1rem 0;
+  background-color: hsl(229, 25%, 31%);
   color: white;
+  width: 30%;
 }
 
-.App-link {
-  color: #61dafb;
+.first-btn {
+  padding: 0.8rem;
+  width: 8%;
+  background-color: hsl(349, 70%, 56%);
+  color: whitesmoke;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.first-btn:hover {
+  background-color: firebrick;
+}
+
+.tasks-btn {
+  padding: 0.5rem;
+  margin: 0 1rem 1rem 0;
+  background-color: hsl(217, 16%, 45%);
+  color: white;
+  width: 15%;
+  border: none;
+  cursor: pointer;
+}
+
+.tasks-btn:hover {
+  background-color: tomato;
+}
+
+.End-btn {
+  padding: 0.5rem;
+  width: 10%;
+  margin: 1rem 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: orangered;
+  color: whitesmoke;
+  border: none;
+}
+
+.End-btn:hover {
+  background-color: rgb(233, 11, 11);
+}
+
+.btn:hover {
+  background-color: red;
+}
+
+.btn {
+  padding: 0.5rem;
+  width: 20%;
+  margin: 1rem 0.5rem;
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  cursor: pointer;
+  color: whitesmoke;
+  border: none;
+}
+
+.Checkbox-btn {
+  width: 20px;
+  height: 20px;
+  accent-color: hsl(349, 70%, 56%);
+  cursor: pointer;
+}
+
+.c-cb {
+  color: wheat;
+}
+
+#list-heading {
+  color: hsl(217, 43%, 56%);
+  margin-bottom: 1rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+  body {
+    margin: 1rem; /* Reduce margin on mobile devices */
   }
-  to {
-    transform: rotate(360deg);
+
+  .Big-container {
+    margin-top: 2rem; /* Adjust margin for mobile devices */
+  }
+
+  .First-input {
+    width: 100%; /* Full-width input for mobile */
+    margin-bottom: 1rem;
+  }
+
+  .first-btn {
+    width: 100%; /* Full-width button for mobile */
+    padding: 0.8rem;
+    margin-bottom: 1rem; /* Add margin for spacing */
+  }
+
+  .tasks-btn {
+    width: 100%; /* Full-width task buttons for mobile */
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    width: 100%; /* Full-width for task edit and delete buttons */
+    margin-bottom: 1rem;
+  }
+
+  .End-btn {
+    width: 100%; /* Full-width for the end button on mobile */
+    margin-bottom: 1rem;
   }
 }
