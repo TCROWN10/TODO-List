@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Users should be able to:
+
+- Add Tasks: Allows users to input new tasks through a text input field and add them to the list.
+
+- Display Tasks: Dynamically displays the list of tasks that the user has added..
 
 ## Available Scripts
 
-In the project directory, you can run:
+- Mark Tasks as Completed: Users can mark tasks as completed using checkboxes or buttons, often resulting in a visual change (e.g., strikethrough or faded text).
 
-### `npm start`
+- Edit Tasks: Allows users to edit existing tasks, typically through an edit button that changes the task to an editable input field.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Delete Tasks: Enables users to remove tasks from the list by clicking a delete button.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Filter Tasks: Users can filter tasks by status, such as All, Active, and Completed tasks.
 
-### `npm test`
+- Task Count: Displays the number of active or incomplete tasks.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Responsive Design: The layout adjusts to different screen sizes for better user experience on mobile and desktop.
 
-### `npm run build`
+- Persistent Storage: Optionally, uses localStorage or an external database to save tasks so they persist even after a page refresh.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Live Site URL: [live site URL]( https://todo-list-sepia-gamma.vercel.app/ )
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Built with
 
-### `npm run eject`
+- javascript
+- React
+- CSS custom properties
+- Flexbox
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Screenshot (desktop and mobile view)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![desktop](/src/Component/assets/Screenshot%202024-09-19%20164354.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![mobile](/src/Component/assets/Screenshot%202024-09-19%20174954.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Author
 
-## Learn More
+- Bolaji Oluwatobi (@Bolajioluwatobi8)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+THANK YOU
