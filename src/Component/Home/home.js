@@ -8,6 +8,8 @@ const Home = () => {
   ]);
   const [newTask, setNewTask] = useState("");
   const [filter, setFilter] = useState("all");
+  const [editingTaskId, setEditingTaskId] = useState(null);
+  const [editingTaskName, setEditingTaskName] = useState("");
 
   // Add a new task
   const handleAddTask = (e) => {
@@ -31,6 +33,25 @@ const Home = () => {
   // Delete a task
   const deleteTask = (id) => {
     setTasks(tasks.filter(task => task.id !== id));
+  };
+
+  // Start editing a task
+  const startEditingTask = (id, name) => {
+    setEditingTaskId(id);
+    setEditingTaskName(name);
+  };
+
+  // Save edited task
+  const handleSaveTask = (id) => {
+    setTasks(tasks.map(task => 
+      task.id === id ? { ...task, name: editingTaskName } : task
+    ));
+    setEditingTaskId(null); // Exit editing mode
+  };
+
+  // Cancel editing
+  const handleCancelEdit = () => {
+    setEditingTaskId(null); // Exit editing mode without saving
   };
 
   // Filter tasks based on the selected filter
@@ -102,21 +123,58 @@ const Home = () => {
                   checked={task.completed}
                   onChange={() => toggleTaskCompleted(task.id)}
                 />
-                <label className="todo-label" htmlFor={`todo-${task.id}`}>
-                {task.name}
-                </label>
-                </div>
+
+                {/* Check if this task is in edit mode */}
+                {editingTaskId === task.id ? (
+                  <input
+                    type="text"
+                    className="First-input"
+                    value={editingTaskName}
+                    onChange={(e) => setEditingTaskName(e.target.value)}
+                  />
+                ) : (
+                  <label className="todo-label" htmlFor={`todo-${task.id}`}>
+                    {task.name}
+                  </label>
+                )}
+              </div>
+
               <div className="btn-group">
-                <button type="button" className="btn">
-                  Edit <span className="visually-hidden">{task.name}</span>
-                </button>
-                <button
-                  type="button"
-                  className="End-btn"
-                  onClick={() => deleteTask(task.id)}
-                >
-                  Delete <span className="visually-hidden">{task.name}</span>
-                </button>
+                {editingTaskId === task.id ? (
+                  <>
+                    <button
+                      type="button"
+                      className="btn"
+                      onClick={() => handleSaveTask(task.id)}
+                    >
+                      Save
+                    </button>
+                    <button
+                      type="button"
+                      className="End-btn"
+                      onClick={handleCancelEdit}
+                    >
+                      Cancel
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button
+                      type="button"
+                      className="btn"
+                      onClick={() => startEditingTask(task.id, task.name)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      className="End-btn"
+                      onClick={() => deleteTask(task.id)}
+                    >
+                      Delete
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           ))}
