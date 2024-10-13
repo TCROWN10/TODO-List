@@ -44,7 +44,7 @@ const  Login= () => {
           className='w-full p-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
           placeholder='Email Address'
           value={formData.email}
-          onClick={handleChange}
+          onChange={handleChange}
           required
           
         />
@@ -59,7 +59,7 @@ const  Login= () => {
           className='w-full p-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
           placeholder='Password'
           value={formData.password}
-          onClick={handleChange}
+          onChange={handleChange}
           required
         />
 
