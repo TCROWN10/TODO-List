@@ -25,7 +25,7 @@ const Home = () => {
 
   // Toggle task completion
   const toggleTaskCompleted = (id) => {
-    setTasks(tasks.map(task => 
+    setTasks(tasks.map(task =>
       task.id === id ? { ...task, completed: !task.completed } : task
     ));
   };
@@ -43,7 +43,7 @@ const Home = () => {
 
   // Save edited task
   const handleSaveTask = (id) => {
-    setTasks(tasks.map(task => 
+    setTasks(tasks.map(task =>
       task.id === id ? { ...task, name: editingTaskName } : task
     ));
     setEditingTaskId(null); // Exit editing mode
@@ -58,6 +58,7 @@ const Home = () => {
   const filteredTasks = tasks.filter(task => {
     if (filter === "active") return !task.completed;
     if (filter === "completed") return task.completed;
+    if (filter === "all") return false; // Hide all tasks when "All" is selected
     return true;
   });
 
@@ -83,7 +84,7 @@ const Home = () => {
             Add
           </button>
         </form>
-        
+
         <div className="Buttons">
           <button
             type="button"
@@ -115,7 +116,7 @@ const Home = () => {
         <div className="Ordered-list" aria-labelledby="list-heading">
           {filteredTasks.map(task => (
             <div key={task.id} className="todo stack-small">
-              <div className="c-cb"> 
+              <div className="c-cb">
                 <input
                   id={`todo-${task.id}`}
                   className="Checkbox-btn"
