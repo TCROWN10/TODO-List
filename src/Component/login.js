@@ -88,7 +88,8 @@ const  Login= () => {
           type='submit'
           className='w-full bg-[rgb(43,62,101)] text-white py-2 rounded-full font-bold hover:bg-blue-800'
         >
-          Agree & Continue
+            <Link to="/LandingPage">  Agree & Continue  </Link>
+
         </button>
       </form>
 
@@ -106,12 +107,11 @@ const  Login= () => {
 
       {/* Sign In Redirect */}
       <p className='mt-4 text-sm text-white'>
-        Already on LinkedIn? 
+        I've you sign in before? 
         <span className='text-blue-800 font-semibold cursor-pointer'> Sign in</span>
       </p>
 
       <span>
-      <Link to="/LandingPage">Landing Page</Link>
     </span>;
     </div>
   )
